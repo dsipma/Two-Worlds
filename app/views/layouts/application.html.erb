@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Steve's World</title>
+		<meta name="keywords" content="Two worlds one consciousness ernenwein" />
+		<meta name="description" content="" />
+		<%= stylesheet_link_tag 'reset', 'default'%>
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<%= render '/layouts/header'%>
+			<div id="page">
+				<div id="page-bgtop">
+					<div id="content">
+						<%= yield%>
+					</div>
+					<!-- end div#content -->
+					<%= render '/layouts/sidebar'%> <div style="clear: both; height: 1px"></div>
+				</div>
+			</div>
+			<!-- end div#page -->
+			<%= render '/layouts/footer'%> <!-- end div#wrapper -->
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!-- <div id="splash"></div> -->
+
+			<%@posts.each do |post|%>
+<div class="post">
+							<h2 class="title"><a href="#"><%= post.title%></a></h2>
+							<p class="byline">
+								Posted by <%= post.user%> on <%=post.created_at.strftime("%a, %b %d")%>
+							</p>
+							<div class="entry">
+								<p>
+									<%=post.entry%>
+								</p>
+								
+							</div>
+							<div class="meta">
+								<p class="links">
+									<a href="#" class="comments">Comments (TODO)</a>
+								</p>
+							</div>
+						</div>
+						<%end%>
+						

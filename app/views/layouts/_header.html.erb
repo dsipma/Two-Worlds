@@ -1,0 +1,20 @@
+  <div id="header">
+    <div id="logo">
+      <h1>Two Worlds, <br>One Consciousness</h1>
+      <h2>Unifying Lucid Dreaming and Conscious Living</h2>
+    </div>
+  </div>
+  <div id="quote">
+  	<%= render "layouts/quote"%>
+  	</div>
+  
+  <div id="menu">
+    <ul>
+    	<li><%= link_to_unless_current "Home", root_path%></li>
+    	<li><%= link_to_unless_current "Bio", bio_path%></li>
+    	<li><%= link_to_unless_current "Contact", contact_path%></li>
+    	<li><%= link_to_unless_current "Order", order_path%></li>
+    	<li><%= link_to_unless_current "Book", book_path%></li>
+
+  </div>
+  
