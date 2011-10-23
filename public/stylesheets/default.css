@@ -222,7 +222,8 @@ td {
 
 #page {
 	width: 940px;
-	margin: 0 auto;
+	margin: 128px auto 128px; 
+	clear: both;
 }
 #page-bgtop {
 }
