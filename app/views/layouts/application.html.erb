@@ -12,6 +12,9 @@
 		<div id="wrapper">
 			<%= render '/layouts/header'%>
 			<div id="page">
+				<p class="notices"<%= notice %></p>
+				<p class="alert"><%= alert%></p>
+					
 				<div id="page-bgtop">
 					<div id="content">
 						<%= yield%>
