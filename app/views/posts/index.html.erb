@@ -1,27 +1,22 @@
 <h1>Listing posts</h1>
+<br>
+	<% @posts.each do |post| %>
+	<table width="580">
+		<tr>
+			<td><%=post.updated_at.strftime("%b %d, %y") %></td>
+		<td><h1><%= post.title %></h1></td>
+	</tr>
+	<tr>
+		<td colspan="3"><%= post.entry %></td>
+	</tr>
+	<tr>
+		<td><%= link_to 'Show', post %></td>
+		<td><%= link_to 'Edit', edit_post_path(post) %></td>
+		<td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+	</table>
+	<br />
+	<% end %>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Entry</th>
-    <th>Title</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.user %></td>
-    <td><%= post.entry %></td>
-    <td><%= post.title %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path %> 

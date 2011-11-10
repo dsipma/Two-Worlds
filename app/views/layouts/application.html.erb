@@ -12,17 +12,16 @@
 		<div id="wrapper">
 			<%= render '/layouts/header'%>
 			<div id="page">
-				<p class="notices"<%= notice %></p>
-				<p class="alert"><%= alert%></p>
-					
 				<div id="page-bgtop">
 					<div id="content">
+						<p class="notices"<%= notice %></p>
+						<p class="alert"><%= alert%></p>
 						<%= yield%>
-					</div>
-					<%= render '/layouts/sidebar'%> <div style="clear: both; height: 1px"></div>
-				</div>
-			</div>
-			<%= render '/layouts/footer'%>
-		</div>
-	</body>
-</html>
+						</div>
+						<%= render '/layouts/sidebar'%> <div style="clear: both; height: 1px"></div>
+						</div>
+						</div>
+						<%= render '/layouts/footer'%>
+						</div>
+						</body>
+						</html>

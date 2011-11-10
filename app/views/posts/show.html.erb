@@ -1,19 +1,18 @@
 <p id="notice"><%= notice %></p>
-
 <p>
-  <b>User:</b>
-  <%= @post.user %>
+  <b>Posted:</b>
+  <%= @post.updated_at.strftime("%b %d, %y") %>
 </p>
-
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
 <p>
   <b>Entry:</b>
   <%= @post.entry %>
 </p>
 
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
+
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
