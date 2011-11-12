@@ -27,6 +27,7 @@ p, blockquote, ul, ol {
 	line-height: 2em;
 }
 p {
+
 }
 blockquote {
 }
@@ -48,11 +49,17 @@ table {
 	border-width: 1px;
 	border-color: #07B6FE;
 	text-align: center;
-
 }
 td {
-	text-align:center;
+	text-align: center;
 	padding: 10px;
+}
+.titlefield {
+	width: 600px;
+}
+.postfield {
+	height: 400px;
+	width: 600px;
 }
 /* Wrapper */
 
@@ -227,7 +234,7 @@ td {
 
 #page {
 	width: 940px;
-	margin: 128px auto 128px; 
+	margin: 128px auto 128px;
 	clear: both;
 }
 #page-bgtop {

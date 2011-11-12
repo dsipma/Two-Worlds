@@ -10,7 +10,7 @@ class PostsController < ApplicationController
         format.xml  { render :xml => @posts }
       end
     else
-      redirect_to root
+      redirect_to root_path
     end
   end
 

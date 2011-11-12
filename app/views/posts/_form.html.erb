@@ -12,11 +12,12 @@
   <% end %>
    <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => "titlefield" %>
   </div>
-   <div class="field">
+  <br />
+   <div class="post">
     <%= f.label :entry %><br />
-    <%= f.text_field :entry %>
+    <%= f.text_field :entry, :class => "postfield" %>
   </div>
   <div class="actions">
     <%= f.submit %>
