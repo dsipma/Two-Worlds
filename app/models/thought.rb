@@ -1,2 +1,4 @@
 class Thought < ActiveRecord::Base
-end
+  validates presence_of :saying
+  validates presence_of :credit
+  end
