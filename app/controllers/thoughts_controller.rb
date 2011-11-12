@@ -2,11 +2,15 @@ class ThoughtsController < ApplicationController
   # GET /thoughts
   # GET /thoughts.xml
   def index
-    @thoughts = Thought.all
+    if current_user.try(:admin?)
+      @thoughts = Thought.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @thoughts }
+      respond_to do |format|  
+       format.html # index.html.erb
+       format.xml  { render :xml => @thoughts }
+      end
+    else
+      redirect_to root_path
     end
   end
 
