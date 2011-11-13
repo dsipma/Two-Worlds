@@ -20,14 +20,22 @@
 					<%= link_to "Learn ancient secrets", "http://www.thesecretofinvisibility.com/"%>
 				</li>
 				<li>
-					<%= link_to "Buy some garbage", "www.ebay.com"%>
+					<%= link_to "Buy some garbage", "http://www.ebay.com"%>
 				</li>
 				<li>
 					<%= link_to "Elvis on the moon", "http://www.ghost-pictures.org/elvis-ghost-photos-moon-1.htm"%>
 				</li>
+				<%if current_user.admin? %>
 				<li>
-					<%= link_to "Elvis on the moon", "http://www.ghost-pictures.org/elvis-ghost-photos-moon-1.htm"%>
+					<%= link_to "Edit Thoughts", thoughts_path%>
 				</li>
+				<li>
+					<%= link_to "Edit Posts", posts_path%>
+				</li>
+				<li>
+					<%= link_to "View Messages", message_path%>
+				</li>
+				<%= end %>
 			</ul>
 		</li>
 	</ul>
