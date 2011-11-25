@@ -1,11 +1,19 @@
 <div id="header">
+	<div id="userinfo">
+		<% if(current_user)%>
+		Logged in as <%=current_user.email%>
+		<%link_to "Log out", signout_path%>
+		<%else%>
+		<%= link_to "Log in", user_registration_path%>
+		<%= link_to "Sign up", new_user_registration_path%>
+		<%end%>
+		</div>
+		
 	<div id="logo">
-		<h1>Two Worlds,
-		<br>
+		<h1>Two Worlds,<br>
 		One Consciousness</h1>
 		<h2>Unifying Lucid Dreaming
-		<br>
-		and Conscious Living</h2>
+		<br>and Conscious Living</h2>
 	</div> <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 	<%= render "layouts/quote"%>
