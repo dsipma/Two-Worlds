@@ -55,12 +55,12 @@ td {
 	padding: 10px;
 }
 .titlefield {
-	width: 600px;
+	width: 200px;
 }
-.entryfield {
-          height: 3;
-    display: block;
 
+.entryfield {
+  width: 600px;
+  rows: 5;
 
 }
 /* Wrapper */
@@ -84,7 +84,8 @@ td {
 	margin: 0px;
 	padding: 15px 0px 0px 0px;
 }
-#logo h1 {
+#logo a {
+
 	margin: 0;
 	padding: 0;
 	font: normal 36px Georgia, "Times New Roman", Times, serif;

@@ -221,7 +221,7 @@
 
 			var scrollTop = clone[0].scrollTop;
 
-			// Don't do anything if scrollTop hasen't changed:
+			// Don't do anything if scrollTop hasn't changed:
 			if (this.previousScrollTop === scrollTop) {
 				return;
 			}
