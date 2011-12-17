@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :admin_only
+
   # GET /posts
   # GET /posts.xml
   def index
