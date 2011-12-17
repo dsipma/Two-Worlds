@@ -7,9 +7,9 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
-  def :admin_only
+  def admin_only
     unless current_user.admin
-      redirect_to root_path, :notice => "You must be authorized to go there "
+      redirect_to root_path, :notice => "You must be authorized to go there"
     end
   end
 end
