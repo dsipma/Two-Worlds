@@ -20,9 +20,26 @@
 <div class="post">
 	<%= f.label :entry %>
 	<br />
-	<%= f.text_field :entry, :class => "postfield" %>
+	<%= f.text_area :entry, :class => "entryfield" %>
 </div>
 <div class="actions">
 	<%= f.submit %>
 </div>
-<% end %> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script
+    <script src="jquery.autoresize.js"></script>
+<script>
+
+$('textarea').autoResize({
+	onBeforeResize: function(){
+		console.log('Before');
+		$(this).css('background', 'red');
+	},
+	onAfterResize: function(){
+		console.log('After');
+		$(this).css('background', '');
+	}
+});
+
+</script>
+
+<% end %>
