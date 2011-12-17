@@ -25,11 +25,10 @@
 <div class="actions">
 	<%= f.submit %>
 </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script src="jquery.autoresize.js"></script>
 <script>
-
-$('textarea').autoResize({
+$('.entryfield').autoResize({
 	onBeforeResize: function(){
 		console.log('Before');
 		$(this).css('background', 'red');
