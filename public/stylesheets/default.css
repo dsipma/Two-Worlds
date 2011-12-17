@@ -59,6 +59,8 @@ td {
 }
 .entryfield {
           height: 3;
+    display: block;
+
 
 }
 /* Wrapper */

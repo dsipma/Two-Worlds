@@ -16,6 +16,7 @@
 	<br />
 	<%= f.text_field :title, :class => "titlefield" %>
 </div>
+
 <br />
 <div class="post">
 	<%= f.label :entry %>
@@ -25,20 +26,4 @@
 <div class="actions">
 	<%= f.submit %>
 </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script src="jquery.autoresize.js"></script>
-<script>
-$('.entryfield').autoResize({
-	onBeforeResize: function(){
-		console.log('Before');
-		$(this).css('background', 'red');
-	},
-	onAfterResize: function(){
-		console.log('After');
-		$(this).css('background', '');
-	}
-});
-
-</script>
-
 <% end %>
