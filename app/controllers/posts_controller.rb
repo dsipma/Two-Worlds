@@ -1,18 +1,14 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :admin_only
+  #{before_filter :authenticate_user!}
 
   # GET /posts
   # GET /posts.xml
   def index
-    if current_user.admin?
       @posts = Post.all
       respond_to do |format|
         format.html # index.html.erb
         format.xml  { render :xml => @posts }
       end
-    else
-      redirect_to root_path
-    end
   end
 
   # GET /posts/1

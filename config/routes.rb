@@ -1,4 +1,10 @@
 TwoWorlds::Application.routes.draw do
+  get "users/index"
+
+  get "users/show"
+
+  get "users/delete"
+
   devise_for :users
   
   resources :comments
