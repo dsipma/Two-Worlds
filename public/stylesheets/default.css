@@ -201,6 +201,12 @@ td {
 	font-size: 12px;
 	color: #E4E4E4;
 }
+
+.notices{
+    color: #07B6FE;
+    font-size: 20px;
+}
+
 #search {
 	height: 51px;
 	margin: 0 auto;
@@ -219,6 +225,7 @@ td {
 	float: left;
 	font: 12px Arial, Helvetica, sans-serif;
 }
+
 #search-text {
 	width: 160px;
 	height: 18px;

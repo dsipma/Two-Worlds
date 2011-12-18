@@ -6,3 +6,15 @@ class CommentTest < ActiveSupport::TestCase
     assert true
   end
 end
+
+# == Schema Information
+#
+# Table name: comments
+#
+#  id         :integer         not null, primary key
+#  user       :string(255)
+#  entry      :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
