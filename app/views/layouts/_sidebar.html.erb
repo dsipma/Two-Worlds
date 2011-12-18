@@ -11,27 +11,31 @@
 		</li>
 		-->
 		<li>
-			<h2>Some Links</h2>
+			<h2>Articles</h2>
 			<ul>
-				<li>
-					<%= link_to "Visit my kitties", "http://www.ding.net/bonsaikitten/index.html"%>
-				</li>
-				<li>
-					<%= link_to "Learn ancient secrets", "http://www.thesecretofinvisibility.com/"%>
-				</li>
-				<li>
-					<%= link_to "Buy some garbage", "http://www.ebay.com"%>
-				</li>
-				<li>
-					<%= link_to "Elvis on the moon", "http://www.ghost-pictures.org/elvis-ghost-photos-moon-1.htm"%>
-				</li>
 
+              <%Article.all.each do |article| %>
+				<li>
+					<%= link_to article.title, article%>
+                  <%if current_user && current_user.admin?%>
+                  <%=link_to "(edit)", edit_article_path(article)%>
+                  <%end%>
+              <%end%>
+				</li>
+                <%if current_user && current_user.admin?%>
+                  <hr>
+                  <br>
+                  <h2>Admin Links</h2>
 				<li>
 					<%= link_to "Edit Thoughts", thoughts_path%>
 				</li>
 				<li>
 					<%= link_to "Edit Posts", posts_path%>
 				</li>
+                  <li>
+                    <%= link_to "Edit Articles", articles_path%>
+                  </li>
+                <%end%>
 			</ul>
 		</li>
 	</ul>

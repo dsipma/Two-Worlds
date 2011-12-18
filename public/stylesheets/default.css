@@ -207,6 +207,11 @@ td {
     font-size: 20px;
 }
 
+.alert{
+    color: #07B6FE;
+    font-size: 20px;
+}
+
 #search {
 	height: 51px;
 	margin: 0 auto;

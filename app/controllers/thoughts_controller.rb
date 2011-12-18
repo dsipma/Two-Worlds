@@ -1,4 +1,6 @@
 class ThoughtsController < ApplicationController
+  before_filter :authenticate_user!, :admin_only
+
   # GET /thoughts
   # GET /thoughts.xml
   def index

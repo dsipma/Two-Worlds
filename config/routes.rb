@@ -1,4 +1,6 @@
 TwoWorlds::Application.routes.draw do
+  resources :articles
+
   get "users/index"
 
   get "users/show"

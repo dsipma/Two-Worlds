@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   def home
     @posts = Post.all
     @pagetitle = "Home"
+
   end
 
   def bio
