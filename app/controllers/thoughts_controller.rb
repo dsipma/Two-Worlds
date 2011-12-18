@@ -2,16 +2,16 @@ class ThoughtsController < ApplicationController
   # GET /thoughts
   # GET /thoughts.xml
   def index
-    if current_user.try(:admin?)
+   # if current_user.try(:admin?)
       @thoughts = Thought.all
 
       respond_to do |format|  
        format.html # index.html.erb
        format.xml  { render :xml => @thoughts }
       end
-    else
-      redirect_to root_path
-    end
+   # else
+  #   redirect_to root_path
+   # end
   end
 
   # GET /thoughts/1
@@ -48,7 +48,7 @@ class ThoughtsController < ApplicationController
 
     respond_to do |format|
       if @thought.save
-        format.html { redirect_to(new_thought_path, :notice => 'Thought was successfully created.') }
+        format.html { redirect_to(thoughts_path, :notice => 'Thought was successfully created.') }
         format.xml  { render :xml => @thought, :status => :created, :location => @thought }
       else
         format.html { render :action => "new" }
@@ -64,7 +64,7 @@ class ThoughtsController < ApplicationController
 
     respond_to do |format|
       if @thought.update_attributes(params[:thought])
-        format.html { redirect_to(@thought, :notice => 'Thought was successfully updated.') }
+        format.html { redirect_to(thoughts_path, :notice => 'Thought was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
