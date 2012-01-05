@@ -7,6 +7,7 @@ class MessageTest < ActiveSupport::TestCase
   end
 end
 
+
 # == Schema Information
 #
 # Table name: messages
@@ -17,5 +18,6 @@ end
 #  message    :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  read       :boolean         default(FALSE)
 #
 

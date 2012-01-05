@@ -8,7 +8,7 @@ TwoWorlds::Application.routes.draw do
   get "users/delete"
 
   devise_for :users
-  
+  resources :messages
   resources :comments
   resources :posts
   resources :thoughts

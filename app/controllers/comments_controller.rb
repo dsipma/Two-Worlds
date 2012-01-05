@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-   #before_filter :authenticate_user!, :admin_only
+  before_filter :authenticate_user!, :admin_only, except: [:new, :create]
 
   # GET /comments
   # GET /comments.xml

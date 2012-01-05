@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :admin_only, :only => [:new, :create, :edit, :update, :destroy]
+  before_filter :admin_only, :except => :show
   # GET /articles
   # GET /articles.xml
   def index

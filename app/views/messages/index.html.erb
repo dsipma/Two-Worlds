@@ -1,0 +1,22 @@
+<h1>Listing Messagess</h1>
+<br>
+	<% @messages.each do |message| %>
+	<table width="580">
+		<tr>
+			<td><%=message.updated_at.strftime("%b %d, %y") %></td>
+		<td><h1><%= message.title %></h1></td>
+	</tr>
+	<tr>
+		<td colspan="3"><%= message.entry %></td>
+	</tr>
+	<tr>
+		<td><%= link_to 'Show', message %></td>
+		<td><%= link_to 'Edit', edit_message_path(message) %></td>
+		<td><%= link_to 'Destroy', message, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+	</table>
+	<br />
+	<% end %>
+
+
+<%= link_to 'New Message', new_message_path %> 
