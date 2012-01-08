@@ -9,6 +9,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #A1A1A1;
+    padding-top: 12px;
 }
 h1, h2, h3 {
 	color: #07B6FE;
@@ -74,6 +75,10 @@ td {
 	height: 128px;
 	margin: 0 auto;
 }
+
+#userinfo {
+    float: right;
+}
 /* Logo */
 
 #logo {
@@ -108,7 +113,7 @@ td {
 	width: 540px;
 	height: 76px;
 	margin-left: 340px;
-	padding-top: 26px;
+	padding-top: 36px;
 	text-align: justify;
 	padding: 0px;
 	font-family: sans-serif;
