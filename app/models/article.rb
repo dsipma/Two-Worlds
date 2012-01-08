@@ -1,6 +1,6 @@
 class Article < ActiveRecord::Base
-  validates :title,   :presence => true
-  validates :text,    :presence => true
+  validates :title, :presence => true
+  validates :text, :presence => true
 
   default_scope :order => "updated_at DESC", :limit => "5"
 end

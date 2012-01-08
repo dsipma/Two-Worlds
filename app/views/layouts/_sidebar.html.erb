@@ -1,45 +1,46 @@
 <div id="sidebar">
-	<ul>
-		<!--<li id="search">
-		<h2>Search</h2>
-		<form method="get" action="">
-		<fieldset>
-		<input type="text" id="search-text" name="s" value="" />
-		<input type="submit" id="search-submit" value="Search" />
-		</fieldset>
-		</form>
-		</li>
-		-->
-		<li>
-			<h2>Articles</h2>
-			<ul>
+  <ul>
+    <!--<li id="search">
+         <h2>Search</h2>
+         <form method="get" action="">
+         <fieldset>
+         <input type="text" id="search-text" name="s" value="" />
+         <input type="submit" id="search-submit" value="Search" />
+         </fieldset>
+         </form>
+         </li>
+         -->
+    <li>
+      <h2>Articles</h2>
+      <ul>
 
-              <%Article.all.each do |article| %>
-				<li>
-					<%= link_to article.title, article%>
-                  <%if current_user && current_user.admin?%>
-                  <%=link_to "(edit)", edit_article_path(article)%>
-                  <%end%>
-              <%end%>
-				</li>
-                <%if current_user && current_user.admin?%>
-                  <hr>
-                  <br>
-                  <h2>Admin Links</h2>
-                  <li>
-                    <%= link_to "Check Messages", root_path%>
-                  </li>
-				<li>
-					<%= link_to "Edit Thoughts", thoughts_path%>
-				</li>
-				<li>
-					<%= link_to "Edit Posts", posts_path%>
-				</li>
-                  <li>
-                    <%= link_to "Edit Articles", articles_path%>
-                  </li>
-                <%end%>
-			</ul>
-		</li>
-	</ul>
+        <% Article.all.each do |article| %>
+            <li>
+              <%= link_to article.title, article %>
+              <% if current_user && current_user.admin? %>
+                  <%= link_to "(edit)", edit_article_path(article) %>
+              <% end %>
+        <% end %>
+        </li>
+        <% if current_user && current_user.admin? %>
+            <hr>
+            <br>
+
+            <h2>Admin Links</h2>
+            <li>
+              <%= link_to "Check Messages", messages_path %>
+            </li>
+            <li>
+              <%= link_to "Edit Thoughts", thoughts_path %>
+            </li>
+            <li>
+              <%= link_to "Edit Posts", posts_path %>
+            </li>
+            <li>
+              <%= link_to "Edit Articles", articles_path %>
+            </li>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
 </div>

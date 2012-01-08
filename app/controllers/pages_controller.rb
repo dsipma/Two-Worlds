@@ -14,7 +14,7 @@ class PagesController < ApplicationController
   end
 
   def contact
-    @pagetitle = "Contact"
+    redirect_to new_message_path
   end
 
   def book

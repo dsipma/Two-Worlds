@@ -1,39 +1,41 @@
 <div id="header">
-	<div id="userinfo">
-		<% if(current_user)%>
-		Logged in as <%=current_user.email%>
-		<%=link_to "Log out", destroy_user_session_path, :method => :delete%>
-		<%else%>
-		<%= link_to "Log in", new_user_session_path%>
-		<%= link_to "Sign up", new_user_registration_path%>
-		<%end%>
-		</div>
-		
-	<div id="logo">
-		<%= link_to "Two Worlds", root_path%>
-      <br>
-      <%= link_to "One Consciousness", root_path%>
-		<h2>Unifying Lucid Dreaming
-		<br>and Conscious Living</h2>
-	</div>
-	<%= render "layouts/quote"%>
-	<div id="menu">
-		<ul>
-			<li>
-				<%= link_to_unless_current "Home", root_path%>
-			</li>
-			<li>
-				<%= link_to_unless_current "Bio", bio_path%>
-			</li>
-			<li>
-				<%= link_to_unless_current "Contact", contact_path%>
-			</li>
-			<li>
-				<%= link_to_unless_current "Order", order_path%>
-			</li>
-			<li>
-				<%= link_to_unless_current "Book", book_path%>
-			</li>
-		</ul>
-	</div>
+  <div id="logo">
+    <%= link_to "Two Worlds", root_path %>
+    <br>
+    <%= link_to "One Consciousness", root_path %>
+    <h2>Unifying Lucid Dreaming
+      <br>and Conscious Living</h2>
+  </div>
+
+  <div id="userinfo">
+    <% if (current_user) %>
+        Logged in as <%= current_user.email %>
+        <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+    <% else %>
+        <%= link_to "Log in", new_user_session_path %>
+        <%= link_to "Sign up", new_user_registration_path %>
+    <% end %>
+  </div>
+
+  <%= render "layouts/quote" %>
+
+  <div id="menu">
+    <ul>
+      <li>
+        <%= link_to_unless_current "Home", root_path %>
+      </li>
+      <li>
+        <%= link_to_unless_current "Bio", bio_path %>
+      </li>
+      <li>
+        <%= link_to_unless_current "Contact", contact_path %>
+      </li>
+      <li>
+        <%= link_to_unless_current "Order", order_path %>
+      </li>
+      <li>
+        <%= link_to_unless_current "Book", book_path %>
+      </li>
+    </ul>
+  </div>
 </div>

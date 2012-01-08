@@ -1,29 +1,27 @@
 <%= form_for(@message) do |f| %>
-<% if @message.errors.any? %>
-<div id="error_explanation">
-	<h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
-	<ul>
-		<% @message.errors.full_messages.each do |msg| %>
-		<li>
-			<%= msg %>
-		</li>
-		<% end %>
-	</ul>
-</div>
-<% end %>
-<div class="field">
-	<%= f.label :title %>
-	<br />
-	<%= f.text_field :title, :class => "titlefield" %>
-</div>
+    <% if @message.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+          <ul>
+            <% @message.errors.full_messages.each do |msg| %>
+                <li>
+                  <%= msg %>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-<br />
-<div class="message">
-	<%= f.label :entry %>
-	<br />
-	<%= f.text_area :entry, :class => "entryfield", :rows =>"4" %>
-</div>
-<div class="actions">
-	<%= f.submit %>
-</div>
+    <div class="field">
+      <%= f.label :message %>
+      <br/>
+      <%= f.text_area :message, class: "entryfield", rows: "4" %>
+    </div>
+
+    <%= f.hidden_field :email, value: current_user.email %>
+
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

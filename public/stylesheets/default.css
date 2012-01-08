@@ -77,7 +77,8 @@ td {
 }
 
 #userinfo {
-    float: right;
+    margin:  auto;
+    padding-bottom: 8px;
 }
 /* Logo */
 
@@ -113,9 +114,8 @@ td {
 	width: 540px;
 	height: 76px;
 	margin-left: 340px;
-	padding-top: 36px;
+	margin-top: 36px;
 	text-align: justify;
-	padding: 0px;
 	font-family: sans-serif;
 }
 #quote #saying {

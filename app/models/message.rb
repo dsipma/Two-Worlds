@@ -1,14 +1,7 @@
 class Message < ActiveRecord::Base
-  validates :id, presence: true
   validates :message, presence: true
+  validates :email, presence: true
 
-  before_save :get_user_info
-
-  private
-  def get_user_info
-    self.name = current_user.name
-    self.email = current_user.email
-  end
 end
 
 

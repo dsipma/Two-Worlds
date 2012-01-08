@@ -1,20 +1,22 @@
 <!-- <div id="splash"></div> -->
-<%@posts.each do |post|%>
-<div class="post">
-	<h2 class="title"><a href="#"><%= post.title%></a></h2>
-	<p class="byline">
-		Posted on <%= post.created_at.strftime("%a, %b %d")%>
-	</p>
-	<div class="entry">
-		<p>
-			<%= post.entry%>
-		</p>
-	</div>
-	<div class="meta">
-		<p class="links">
-			<%= link_to "View Comments", root_path%>
-          <%= link_to "Make a Comment", root_path%>
-		</p>
-	</div>
-</div>
-<%end%> 
+<% @posts.each do |post| %>
+    <div class="post">
+      <h2 class="title"><a href="#"><%= post.title %></a></h2>
+
+      <p class="byline">
+        Posted on <%= post.created_at.strftime("%a, %b %d") %>
+      </p>
+
+      <div class="entry">
+        <p>
+          <%= post.entry %>
+        </p>
+      </div>
+      <div class="meta">
+        <p class="links">
+          <%= link_to "View Comments", root_path %>
+          <%= link_to "Make a Comment", root_path %>
+        </p>
+      </div>
+    </div>
+<% end %>

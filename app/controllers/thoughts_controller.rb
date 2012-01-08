@@ -4,16 +4,16 @@ class ThoughtsController < ApplicationController
   # GET /thoughts
   # GET /thoughts.xml
   def index
-   # if current_user.try(:admin?)
-      @thoughts = Thought.all
+    # if current_user.try(:admin?)
+    @thoughts = Thought.all
 
-      respond_to do |format|  
-       format.html # index.html.erb
-       format.xml  { render :xml => @thoughts }
-      end
-   # else
-  #   redirect_to root_path
-   # end
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml { render :xml => @thoughts }
+    end
+    # else
+    #   redirect_to root_path
+    # end
   end
 
   # GET /thoughts/1
@@ -23,7 +23,7 @@ class ThoughtsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @thought }
+      format.xml { render :xml => @thought }
     end
   end
 
@@ -34,7 +34,7 @@ class ThoughtsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @thought }
+      format.xml { render :xml => @thought }
     end
   end
 
@@ -51,10 +51,10 @@ class ThoughtsController < ApplicationController
     respond_to do |format|
       if @thought.save
         format.html { redirect_to(thoughts_path, :notice => 'Thought was successfully created.') }
-        format.xml  { render :xml => @thought, :status => :created, :location => @thought }
+        format.xml { render :xml => @thought, :status => :created, :location => @thought }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @thought.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @thought.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -67,10 +67,10 @@ class ThoughtsController < ApplicationController
     respond_to do |format|
       if @thought.update_attributes(params[:thought])
         format.html { redirect_to(thoughts_path, :notice => 'Thought was successfully updated.') }
-        format.xml  { head :ok }
+        format.xml { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @thought.errors, :status => :unprocessable_entity }
+        format.xml { render :xml => @thought.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -83,7 +83,7 @@ class ThoughtsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(thoughts_url) }
-      format.xml  { head :ok }
+      format.xml { head :ok }
     end
   end
 end

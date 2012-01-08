@@ -9,17 +9,17 @@
     <th></th>
   </tr>
 
-<% @comments.each do |comment| %>
-  <tr>
-    <td><%= comment.user %></td>
-    <td><%= comment.entry %></td>
-    <td><%= link_to 'Show', comment %></td>
-    <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-    <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+  <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.user %></td>
+        <td><%= comment.entry %></td>
+        <td><%= link_to 'Show', comment %></td>
+        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+        <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+  <% end %>
 </table>
 
-<br />
+<br/>
 
 <%= link_to 'New Comment', new_comment_path %>
