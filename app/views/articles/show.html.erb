@@ -1,10 +1,29 @@
-<p id="notice"><%= notice %></p>
-
 <h1><%= @article.title %></h1>
 
 <p>
   <%= simple_format @article.text %>
 </p>
+
+<div id="show_comments"><p>Show Comments</p></div>
+<div id="article_comments">
+  <table>
+    <% @article.comments.each do |comment| %>
+    <tr>
+      <td>
+        <%= comment.email %>
+      </td>
+      <td>
+        <%= comment.entry %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+
+<div id="add_comment"><%= link_to "Add Comment", new_comment_path%></div>
+
+
+
 
 
 

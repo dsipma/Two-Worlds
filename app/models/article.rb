@@ -3,6 +3,7 @@ class Article < ActiveRecord::Base
   validates :text, :presence => true
 
   default_scope :order => "updated_at DESC", :limit => "5"
+  has_many :comments
 end
 
 # == Schema Information

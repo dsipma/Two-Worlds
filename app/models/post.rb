@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
             :length => { :within => (1.. 255) }
 
   default_scope :order => "updated_at DESC", :limit => "3"
-  has_many :comments
+
 end
 
 # == Schema Information

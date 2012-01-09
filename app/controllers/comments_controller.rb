@@ -27,6 +27,8 @@ class CommentsController < ApplicationController
   # GET /comments/new.xml
   def new
     @comment = Comment.new
+    @comment.article_id = params[:id]
+    @comment.user_id = current_user.id
 
     respond_to do |format|
       format.html # new.html.erb
@@ -46,7 +48,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to(@comment, :notice => 'Comment was successfully created.') }
+        format.html { redirect_to(articles_path(@comment.article), :notice => 'Comment was successfully created.') }
         format.xml { render :xml => @comment, :status => :created, :location => @comment }
       else
         format.html { render :action => "new" }

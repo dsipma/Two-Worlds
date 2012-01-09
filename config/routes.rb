@@ -12,6 +12,7 @@ TwoWorlds::Application.routes.draw do
   resources :comments
   resources :posts
   resources :thoughts
+  resources :articles
 
   match "/bio", :to => 'pages#bio'
   match "/contact", :to => 'pages#contact'
