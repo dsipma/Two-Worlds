@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
 
   has_many :comments
 
+#  def make_comment!(@comment)
+#    comment.create(user_id: )
+#  end
 end
 
 # == Schema Information
