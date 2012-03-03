@@ -7,6 +7,7 @@ gem 'rails', '3.0.10'
 gem 'devise'
 gem 'sqlite3'
 gem 'jquery-rails'
+gem 'heroku'
 
 
 

@@ -1,12 +1,5 @@
 TwoWorlds::Application.routes.draw do
   resources :articles
-
-  get "users/index"
-
-  get "users/show"
-
-  get "users/delete"
-
   devise_for :users
   resources :messages
   resources :comments

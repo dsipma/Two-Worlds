@@ -11,14 +11,14 @@
         </div>
     <% end %>
 
-    <%= f.text_field :user_id%>
+    <%= f.hidden_field :user_id%>
     <%= f.text_field :article_id%>
 
 
     <div class="field">
       <%= f.label :entry %>
       <br/>
-      <%= f.text_field :entry %>
+      <%= f.text_area :entry %>
     </div>
     <div class="actions">
       <%= f.submit %>
