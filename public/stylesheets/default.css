@@ -387,6 +387,9 @@ td {
 }
 
 #article_comments {
-    margin: auto;
+    display: none;
+}
+
+#add_article_comment {
     display: none;
 }
