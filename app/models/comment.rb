@@ -1,5 +1,7 @@
 class Comment < ActiveRecord::Base
-  validates :entry, :presence => true
+  validates :entry,       presence: true
+  validates :user_id,     presence: true
+  validates :article_id,  presence: true
 
   belongs_to :article
   belongs_to :user
